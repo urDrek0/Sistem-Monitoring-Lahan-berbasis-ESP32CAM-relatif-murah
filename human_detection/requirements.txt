@@ -1,0 +1,18 @@
+Saat Ditest di Laptop PC (pc_env) atau Di-deploy ke Raspberry Pi 3 (ai_env):
+
+Pastikan Anda menggunakan Google LiteRT (ai-edge-litert) yang hemat memori dan sepenuhnya mendukung Python 3.13+:
+
+    pip install opencv-python-headless numpy websockets ai-edge-litert openvino
+
+
+Install Ultralytics (on your PC/Server or Pi if it has enough space):
+
+    pip install ultralytics
+
+Run the Export Command in Terminal:
+
+    yolo export model=yolo11n.pt format=tflite int8=True
+
+Locate the exported file:
+
+    This will download yolo11n.pt and compile a folder named yolo11n_saved_model/ containing yolo11n_int8.tflite
